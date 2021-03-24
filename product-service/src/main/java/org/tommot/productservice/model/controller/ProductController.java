@@ -17,8 +17,8 @@ import java.util.List;
 @RequestMapping("/api/v1/product")
 public class ProductController {
 
-    @Autowired
-    private ProductRepository productRepository;
+    //@Autowired
+    private final ProductRepository productRepository;
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
@@ -28,9 +28,11 @@ public class ProductController {
     }
 
     @PostMapping("/create/")
-    public ResponseEntity<Product> createProduct(@RequestBody Product product){
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createProduct(@RequestBody Product product){
         log.info("Implementing: createProduct");
-        Product newProduct = productRepository.save(product);
-        return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
+        productRepository.save(product);
+        //Product newProduct = productRepository.save(product);
+        //return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }
 }
