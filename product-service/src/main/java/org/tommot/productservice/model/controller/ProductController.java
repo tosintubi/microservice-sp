@@ -16,7 +16,6 @@ import java.util.List;
 @RequestMapping("/api/v1/product")
 public class ProductController {
 
-
     private ProductRepository productRepository;
 
     @GetMapping("/all")
@@ -25,7 +24,6 @@ public class ProductController {
         log.info("Implementing: findAllProducts");
         return productRepository.findAll();
     }
-
 
     @PostMapping("/create/")
     public ResponseEntity<Product> createProduct(@RequestBody Product product){
