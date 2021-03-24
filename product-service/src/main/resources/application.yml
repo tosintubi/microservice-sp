@@ -1,2 +1,7 @@
 server:
   port: 8880
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/product-service
