@@ -2,10 +2,8 @@ package org.tommot.productservice.model.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.tommot.productservice.model.Product;
 import org.tommot.productservice.model.repository.ProductRepository;
 
@@ -23,5 +21,11 @@ public class ProductController {
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findAllProducts(){
         return productRepository.findAll();
+    }
+
+
+    @PostMapping("/create/")
+    public ResponseEntity<Product> createProduct(@RequestBody Product product){
+        return new ResponseEntity<>(product, HttpStatus.OK);
     }
 }
