@@ -26,7 +26,7 @@ public class ProductController {
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findAllProducts(){
         log.info("Implementing: findAllProducts");
-        return productRepository.findAll();
+        return productService.findAll();
     }
 
     @PostMapping("/create/")
