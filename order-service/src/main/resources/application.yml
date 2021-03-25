@@ -7,10 +7,10 @@ spring:
 
 
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/order-service
-    data-username: root # temp
-    data-password: dogood1!
+    username: root
+    password: dogood1!
     initialization-mode: always
 
   jpa:
@@ -18,5 +18,5 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialet.MySql8Dialect
+        dialect: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
