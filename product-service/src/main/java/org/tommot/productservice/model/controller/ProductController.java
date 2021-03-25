@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.tommot.productservice.model.Product;
 import org.tommot.productservice.model.repository.ProductRepository;
+import org.tommot.productservice.model.service.ProductService;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class ProductController {
 
     //@Autowired
     private final ProductRepository productRepository;
+    private ProductService productService;
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
