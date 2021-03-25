@@ -33,6 +33,7 @@ public class ProductController {
     @ResponseStatus(HttpStatus.CREATED)
     public void createProduct(@RequestBody Product product){
         log.info("Implementing: createProduct");
+        productService.saveProduct(product);
         productRepository.save(product);
         //Product newProduct = productRepository.save(product);
         //return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
