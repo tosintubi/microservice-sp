@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.tommot.productservice.model.Product;
-import org.tommot.productservice.model.repository.ProductRepository;
 import org.tommot.productservice.model.service.ProductService;
 
 import java.util.List;
