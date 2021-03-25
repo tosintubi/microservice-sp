@@ -31,11 +31,9 @@ public class ProductController {
 
     @PostMapping("/create/")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createProduct(@RequestBody Product product){
+    public ResponseEntity<Product> createProduct(@RequestBody Product product){
         log.info("Implementing: createProduct");
-        productService.saveProduct(product);
-        productRepository.save(product);
-        //Product newProduct = productRepository.save(product);
-        //return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
+        Product newProduct = productService.saveProduct(product);
+        return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }
 }
