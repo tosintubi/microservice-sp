@@ -18,8 +18,7 @@ import java.util.List;
 @RequestMapping("/api/v1/product")
 public class ProductController {
 
-    //@Autowired
-    private final ProductRepository productRepository;
+    @Autowired
     private ProductService productService;
 
     @GetMapping("/all")
