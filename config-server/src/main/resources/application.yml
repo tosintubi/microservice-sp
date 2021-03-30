@@ -1,6 +1,18 @@
 spring:
   application:
     name: configuration-server
+  cloud:
+    config:
+      server:
+        git:
+          username:
+          password:
+          clone-on-start: true
+          uri: https://github.com/tosintubi/microservice-config-server
+  profiles:
+    active: native
+
+
 
 server:
-  port: 8888
+  port: 8882
