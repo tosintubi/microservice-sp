@@ -19,8 +19,6 @@
 	</properties>
 	<dependencies>
 
-
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -31,7 +29,6 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 			<version>3.0.1</version>
 		</dependency>
-
 
 	</dependencies>
 	<dependencyManagement>
