@@ -22,14 +22,14 @@ public class ProductController {
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
-    public List<Product> findAllProducts(){
+    public List<Product> findAllProducts() {
         log.info("Implementing: findAllProducts");
         return productService.findAll();
     }
 
     @PostMapping("/create/")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Product> createProduct(@RequestBody Product product){
+    public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         log.info("Implementing: createProduct");
         Product newProduct = productService.saveProduct(product);
         return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
