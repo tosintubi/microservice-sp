@@ -1,4 +1,4 @@
-package org.tommot.productservice.model.controller;
+package org.tommot.productservice.controller;
 
 import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;

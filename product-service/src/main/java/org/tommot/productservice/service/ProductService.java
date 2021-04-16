@@ -1,11 +1,11 @@
-package org.tommot.productservice.model.service;
+package org.tommot.productservice.service;
 
 
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tommot.productservice.model.Product;
-import org.tommot.productservice.model.repository.ProductRepository;
+import org.tommot.productservice.repository.ProductRepository;
 
 import java.util.List;
 

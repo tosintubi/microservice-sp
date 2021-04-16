@@ -1,4 +1,4 @@
-package org.tommot.productservice.model.controller;
+package org.tommot.productservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.tommot.productservice.model.Product;
-import org.tommot.productservice.model.service.ProductService;
+import org.tommot.productservice.service.ProductService;
 
 import java.util.List;
 
