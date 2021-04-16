@@ -20,3 +20,4 @@ public class InventoryController {
         return inventoryService.checkStock(skuCode);
     }
 }
+
