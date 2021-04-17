@@ -19,9 +19,4 @@ public class Inventory {
     private Long id;
     private String skuCode;
     private Integer stock;
-
-    public Integer getStockBalance(){
-        return stock;
-    }
-
 }
