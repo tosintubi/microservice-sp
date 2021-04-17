@@ -1,6 +1,8 @@
 package org.tommot.inventoryservice.service;
 
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,12 +13,14 @@ import org.tommot.inventoryservice.repository.InventoryRepository;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class InventoryService
 {
     @Autowired
-    private final InventoryRepository inventoryRepository;
+    private  InventoryRepository inventoryRepository;
     private final static String PRODUCT_NOT_FOUND_SKU_CODE = "Cannot find product by Sku Code :";
 
     public Boolean checkStock(String skuCode) {
@@ -26,11 +30,11 @@ public class InventoryService
     }
 
     // Checks if item in stock, returns the balance else return -1
-    public Integer getStockBalance(String skuCode) {
-        if (checkStock(skuCode)) {
-            List<Inventory> inventory = inventoryRepository.getStockBalance(skuCode);
-            return inventory.size();
-        } else
-            return -1;
-    }
+//    public Integer getStockBalance(String skuCode) {
+//        if (checkStock(skuCode)) {
+//            List<Inventory> inventory = inventoryRepository.getStockBalance(skuCode);
+//            return inventory.size();
+//        } else
+//            return -1;
+//    }
 }
