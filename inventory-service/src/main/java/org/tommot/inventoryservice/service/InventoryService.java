@@ -1,13 +1,12 @@
 package org.tommot.inventoryservice.service;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.tommot.inventoryservice.model.Inventory;
 import org.tommot.inventoryservice.repository.InventoryRepository;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Service
