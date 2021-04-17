@@ -20,4 +20,8 @@ public class Inventory {
     private String skuCode;
     private Integer stock;
 
+    public Integer getStockBalance(){
+        return stock;
+    }
+
 }
