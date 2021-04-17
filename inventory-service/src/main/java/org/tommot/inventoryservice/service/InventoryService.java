@@ -2,6 +2,7 @@ package org.tommot.inventoryservice.service;
 
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tommot.inventoryservice.model.Inventory;
 import org.tommot.inventoryservice.repository.InventoryRepository;
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class InventoryService
 {
+    @Autowired
     private final InventoryRepository inventoryRepository;
     private final static String PRODUCT_NOT_FOUND_SKU_CODE = "Cannot find product by Sku Code :";
 

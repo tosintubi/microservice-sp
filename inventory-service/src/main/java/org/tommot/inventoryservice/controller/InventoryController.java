@@ -1,7 +1,9 @@
 package org.tommot.inventoryservice.controller;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -9,12 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import org.tommot.inventoryservice.service.InventoryService;
 
 @RestController
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @RequestMapping("/api/v1/inventory")
+@NoArgsConstructor
+@AllArgsConstructor
 @Slf4j
 public class InventoryController {
 
-    private final InventoryService inventoryService;
+    private  InventoryService inventoryService;
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{skuCode}")
