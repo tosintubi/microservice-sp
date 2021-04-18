@@ -26,11 +26,11 @@ public class InventoryController {
         return inventoryService.checkStock(skuCode);
     }
 
-//    @ResponseStatus(HttpStatus.OK)
-//    @GetMapping("/stock/{skuCode}")
-//    Integer stockBalance(@PathVariable String skuCode){
-//        log.info("Implementing: stockBalance");
-//        return inventoryService.getStockBalance(skuCode);
-//    }
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/stock/{skuCode}")
+    Integer stockBalance(@PathVariable String skuCode){
+        log.info("Implementing: stockBalance");
+        return inventoryService.getStockBalance(skuCode);
+    }
 }
 
