@@ -29,6 +29,7 @@ public class InventoryService
         return inventory.getStock() > 0;
     }
 
+
     // Checks if item in stock, returns the balance else return -1
     public Integer getStockBalance(String skuCode) {
         return (checkStock(skuCode)) ? inventoryRepository.getStockBalance(skuCode) : -1;
