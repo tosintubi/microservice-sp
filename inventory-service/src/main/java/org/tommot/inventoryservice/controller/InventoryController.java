@@ -10,14 +10,18 @@ import org.springframework.web.bind.annotation.*;
 import org.tommot.inventoryservice.service.InventoryService;
 
 @RestController
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @RequestMapping("/api/v1/inventory")
 @Slf4j
 
 public class InventoryController {
 
-    @Autowired
+    //@Autowired
     private final InventoryService inventoryService;
+
+    public InventoryController(InventoryService inventoryService) {
+        this.inventoryService = inventoryService;
+    }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{skuCode}")
