@@ -10,13 +10,11 @@ import org.tommot.productservice.repository.ProductRepository;
 import java.util.List;
 
 @Service
-@NoArgsConstructor
 public class ProductService {
 
 
     private ProductRepository productRepository;
 
-    //@Autowired
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
